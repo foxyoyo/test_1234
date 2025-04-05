@@ -33,7 +33,7 @@ jobs:
           echo "JS filenames:"
           js_file=$(find dist/assets -name '*.js' -type f | head -n 1)
           echo "Found JS file: $js_file"
-          cho "script-file=$js_file" >> $GITHUB_OUTPUT
+          echo "script-file=$js_file" >> $GITHUB_OUTPUT
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
