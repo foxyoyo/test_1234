@@ -52,7 +52,7 @@ jobs:
         run: ls -R dist
       - name: GetOutputs
         run: |
-          echo "script-file=${{ needs.build.outputs.output-script-file }}"
+          echo "${{ needs.build.outputs.output-script-file }}"
       - name: Deploy
         run: echo "Deploying..."
 
